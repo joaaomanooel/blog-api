@@ -2,14 +2,17 @@
   "name": "graphql-api",
   "version": "0.1.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.8.3"
+  },
   "scripts": {
     "start": "tsc ."
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "typescript": "2.5.3"
-  }
+  "dependencies": {}
 }
