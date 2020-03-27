@@ -1,18 +1,47 @@
 {
-  "name": "graphql-api",
+  "name": "blog-api",
   "version": "0.1.0",
-  "main": "index.js",
+  "description": "Blog API builded with NodeJS and GraphQL",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "node dist/index.js"
+  },
+  "author": {
+    "name": "Joao Manoel Neto",
+    "url": "https://github.com/joaaomanooel",
+    "email": "joaaomanooel@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "bugs": {
+    "email": "joaaomanooel@gmail.com",
+    "url": "https://github.com/joaaomanooel/blog-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaaomanooel/blog-api.git"
+  },
+  "homepage": "https://github.com/joaaomanooel/blog-api#readme",
+  "keywords": [
+    "jwt",
+    "node",
+    "graphql",
+    "express",
+    "sequelize",
+    "javascript",
+    "typescript"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "nodemon": "^2.0.2",
     "typescript": "^3.8.3"
-  },
-  "scripts": {
-    "start": "tsc ."
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {}
+  }
 }
