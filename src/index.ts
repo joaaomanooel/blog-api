@@ -1,3 +1,6 @@
+/* eslint-disable import/first */
+require('dotenv').config();
+
 import * as http from 'http';
 import app from './app';
 import { normalizePort, onError, onListening } from './utils';
