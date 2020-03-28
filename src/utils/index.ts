@@ -1,27 +1,29 @@
-import { Server } from "http";
+/* eslint-disable no-console */
+import { Server } from 'http';
+import { AddressInfo } from 'net';
 
 export const normalizePort = (val: number | string): number | string | boolean => {
-  const port: number = (typeof val === 'string') ? parseInt(val) : val;
+  const port: number = typeof val === 'string' ? parseInt(val) : val;
   if (isNaN(port)) return val;
-  else if (port >= 0) return port;
-  else return false;
-}
+  if (port >= 0) return port;
+  return false;
+};
 
-export const onError = (error: Error) => {
+export const onError = (error: Error): void => {
   const splitedMessage: Array<string> = error.message.split(': ');
-  console.log(`\n[${splitedMessage[0].toUpperCase()}]: ${splitedMessage[1]}\n`);
+  console.error(`\n[${splitedMessage[0].toUpperCase()}]: ${splitedMessage[1]}\n`);
   process.exit(1);
-}
+};
 
 export const onListening = (server: Server) => (): void => {
-  const addr: any = server.address();
-  const bind: string = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
-  console.log(`
+  const addr: string | AddressInfo = server.address();
+  const bind: string = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  console.error(`
 +===========================================+
 |                 BLOG API!                 |
 +===========================================+
 |         Listening at ${bind}...         |
 |                                           |
 +===========================================+
-`)
-}
+`);
+};
