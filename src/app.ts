@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as graphqlHTTP from 'express-graphql';
 import schema from './graphql/schema';
+import db from './models';
 
 class App {
   public express: express.Application;
@@ -10,9 +11,12 @@ class App {
     this.middleware();
   }
 
-  env = process.env.NODE_ENV;
   private middleware(): void {
-    this.express.use('/graphql', graphqlHTTP({ schema, graphiql: this.env === 'development' }));
+    this.express.use('/graphql', graphqlHTTP({
+      graphiql: process.env.NODE_ENV === 'development',
+      context: { db },
+      schema,
+    }));
   }
 }
 

@@ -5,6 +5,6 @@ import Comment from '../models/CommentModel';
 
 export interface ModelsInterface {
   Comment: ModelCtor<Comment>;
-  Post: ModelCtor<User>;
-  User: ModelCtor<Post>;
+  Post: ModelCtor<Post>;
+  User: ModelCtor<User>;
 }
