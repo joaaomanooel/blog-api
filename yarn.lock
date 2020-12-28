@@ -151,10 +151,10 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@types/validator@*", "@types/validator@^12.0.1":
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-12.0.1.tgz#73dbc7f5f730ff7131754bca682824eb3c260b79"
-  integrity sha512-l57fIANZLMe8DArz+SDb+7ATXnDm15P7u2wHBw5mb0aSMd+UuvmvhouBF2hdLgQPDMJ39sh9g2MJO4GkZ0VAdQ==
+"@types/validator@*", "@types/validator@^13.1.2":
+  version "13.1.2"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.1.2.tgz#03b989935c71a4c0b2582dbb20a1697dcc9eb319"
+  integrity sha512-ZLZRZ+l2Ny+XIO3dR9i5ET9AzSele8uFye/fxk1JiIOY3NLAyFGIaIpv8LRbV1L4ISazU/SeOJSdPlKxoHM9Mw==
 
 "@typescript-eslint/eslint-plugin@^2.25.0":
   version "2.25.0"
